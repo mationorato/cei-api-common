@@ -3,13 +3,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Cei.Api.Common</PackageId>
-    <Version>1.0-b</Version>
+    <Title>Cei.Api.Common</Title>
+    <Version>1.0.0-b</Version>
     <Authors>Matias Onorato</Authors>
     <Company>CEI UBA</Company>
     <Description>Librería general de uso compartido para desarrollo de Endpoints de la API del CEI</Description>
-    <PackageLicenseUrl>MIT</PackageLicenseUrl>
     <PackageTags>CEI,UBA</PackageTags>
+    <Language>C#</Language>
+    <PackageLicense>MIT</PackageLicense>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/mationorato/cei-api-common/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/mationorato/cei-api-common</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
