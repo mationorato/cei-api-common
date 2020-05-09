@@ -6,7 +6,7 @@ Release 1.0.0
 
 Librería general de uso compartido para desarrollo de Endpoints de la API del CEI en ASP.NET Web API
 
-### Auth 
+## Auth 
 Atributo para propocionar authentication via Api Key. Requiere implementar `Cei.Api.Common.Models.CeiApiKey` como Dependency Injection para leer *appsettings.json* (ver Settings)
 
 #### Implementación
@@ -32,7 +32,7 @@ Cei.Api.Common.Models.Encuesta
 Cei.Api.Common.Models.EncuestaRespuesta
 ```
 
-### Settings
+## Settings
 Clases para configurar Inyección de depedencias de appsettings.
 ```c#
 Cei.Api.Common.Models.CeiApiDB
@@ -91,7 +91,7 @@ public class Startup
 
 Por razones de seguridad Setear *ConnectionString* y las *CeiApiKey* por user-secrets de .NET o por variables de entorno.
 
-### Servicios
+## Servicios
 
 ***MongoCrudService***
 
