@@ -112,6 +112,24 @@ Funcionalidades:
 
 #### implementación con Dependency Injection
 
+*En capa de servicios*
+
+```c#
+using Cei.Api.Common.Services;
+using Cei.Api.Common.Models;
+
+public class ModeloService : MongoCrudService<Modelo>
+{
+    public ModeloService(ICeiApiDB dbSettings) :
+        base(dbSettings, dbSettings.Collections.Modelo)
+    {
+      //agregar metodos personalizados si es necesario
+      . . .
+    }
+}
+
+```
+
 *Startup.cs*
 
 ```c#
