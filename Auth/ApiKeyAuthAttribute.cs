@@ -22,7 +22,6 @@ namespace Cei.Api.Common.Auth
             }
 
             var CeiApiKey = context.HttpContext.RequestServices.GetRequiredService<IOptions<CeiApiKey>>().Value;
-            var Ceidb = context.HttpContext.RequestServices.GetRequiredService<IOptions<CeiApiDbConnection>>().Value;
 
             if (!CeiApiKey.Current.Equals(potentialApiKey))
             {

@@ -1,10 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Cei.Api.Common</PackageId>
     <Title>Cei.Api.Common</Title>
-    <Version>1.0.0-b</Version>
+    <Version>1.0.0</Version>
     <Authors>Matias Onorato</Authors>
     <Company>CEI UBA</Company>
     <Description>Librería general de uso compartido para desarrollo de Endpoints de la API del CEI</Description>
@@ -15,11 +14,10 @@
     <RepositoryUrl>https://github.com/mationorato/cei-api-common</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="MongoDB.Driver" Version="2.10.3" />
+    <PackageReference Include="System.Text.Json" Version="4.7.1" />
   </ItemGroup>
-
 </Project>

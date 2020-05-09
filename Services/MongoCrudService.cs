@@ -13,10 +13,16 @@ namespace Cei.Api.Common.Services
     {
         protected IMongoCollection<ModelType> collection { get; }
 
-        public MongoCrudService(ICeiApiDbConnection dbConnection, string collectionName)
+        public MongoCrudService(ICeiApiDB dbSettings)
         {
-            var client = new MongoClient(dbConnection.ConnectionString);
-            var database = client.GetDatabase(dbConnection.DatabaseName);
+            var client = new MongoClient(dbSettings.ConnectionString);
+            var database = client.GetDatabase(dbSettings.DatabaseName);
+        }
+
+        public MongoCrudService(ICeiApiDB dbSettings, string collectionName)
+        {
+            var client = new MongoClient(dbSettings.ConnectionString);
+            var database = client.GetDatabase(dbSettings.DatabaseName);
             this.collection = database.GetCollection<ModelType>(collectionName);
         }
 
@@ -67,7 +73,6 @@ namespace Cei.Api.Common.Services
                 .Find(filter)
                 .ToListAsync();
         }
-
 
         public Task<List<ResultType>> GetByTextSearch<ResultType>(
             string search, Expression<Func<ModelType, ResultType>> projection) =>
