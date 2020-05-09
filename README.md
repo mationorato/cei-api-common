@@ -66,7 +66,7 @@ public class Startup
 ```
 
 *appsettings.json*
-```c#
+```json
 {
   . . .
   "CeiApiDB": {
