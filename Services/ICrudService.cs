@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 
 namespace Cei.Api.Common.Services
@@ -33,8 +34,8 @@ namespace Cei.Api.Common.Services
             string search, Expression<Func<ModelType, ResultType>> projection);
 
         Task CreateAsync(ModelType model);
-        Task UpdateAsync(string id, ModelType model);
-        Task RemoveAsync(ModelType model);
-        Task RemoveAsync(string id);
+        Task<ModelType> UpdateAsync(string id, ModelType model);
+        Task<ModelType> DeleteAsync(ModelType model);
+        Task<ModelType> DeleteAsync(string id);
     }
 }

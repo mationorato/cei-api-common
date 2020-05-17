@@ -85,16 +85,16 @@ namespace Cei.Api.Common.Services
             this.collection
                 .InsertOneAsync(model);
 
-        public Task UpdateAsync(string id, ModelType model) =>
+        public Task<ModelType> UpdateAsync(string id, ModelType model) =>
             this.collection
-                .ReplaceOneAsync(m => m.Id == id, model);
+                .FindOneAndReplaceAsync(m => m.Id == id, model);
 
-        public Task RemoveAsync(ModelType model) =>
+        public Task<ModelType> DeleteAsync(ModelType model) =>
             this.collection
-                .DeleteOneAsync(m => m.Id == model.Id);
+                .FindOneAndDeleteAsync(m => m.Id == model.Id);
 
-        public Task RemoveAsync(string id) =>
+        public Task<ModelType> DeleteAsync(string id) =>
             this.collection
-                .DeleteOneAsync(m => m.Id == id);
+                .FindOneAndDeleteAsync(m => m.Id == id);
     }
 }

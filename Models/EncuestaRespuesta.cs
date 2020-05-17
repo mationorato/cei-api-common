@@ -47,7 +47,7 @@ namespace Cei.Api.Common.Models
 
             [Required]
             [BsonElement("respuesta")]
-            public string Respuesta { get; set; }
+            public string[] Respuestas { get; set; }
         }
     }
 }

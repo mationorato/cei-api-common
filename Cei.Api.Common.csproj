@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Cei.Api.Common</PackageId>
     <Title>Cei.Api.Common</Title>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Matias Onorato</Authors>
     <Company>CEI UBA</Company>
     <Description>Librería general de uso compartido para desarrollo de Endpoints de la API del CEI</Description>

@@ -40,6 +40,12 @@ namespace Cei.Api.Common.Models
             [Required]
             [BsonElement("pregunta")]
             public string Pregunta { get; set; }
+
+            [BsonElement("respuestas")]
+            public string[] Respuestas { get; set; }
+
+            [BsonElement("multiple")]
+            public bool multiple { get; set; }
         }
     }
 }
