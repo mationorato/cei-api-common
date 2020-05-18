@@ -2,7 +2,7 @@
 
 > .NET standard 2.0 Class Library
 
-Release 1.0.0
+Release 1.0.1
 
 Librería general de uso compartido para desarrollo de Endpoints de la API del CEI en ASP.NET Web API
 

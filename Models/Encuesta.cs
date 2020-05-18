@@ -34,18 +34,14 @@ namespace Cei.Api.Common.Models
         public class PreguntaStruct
         {
             [Required]
-            [BsonElement("numero")]
-            public int Numero { get; set; }
-
-            [Required]
             [BsonElement("pregunta")]
             public string Pregunta { get; set; }
 
-            [BsonElement("respuestas")]
-            public string[] Respuestas { get; set; }
+            [BsonElement("opciones")]
+            public string[] Opciones { get; set; }
 
             [BsonElement("multiple")]
-            public bool multiple { get; set; }
+            public bool Multiple { get; set; }
         }
     }
 }

@@ -41,9 +41,8 @@ namespace Cei.Api.Common.Models
         public class RespuestaStruct
         {
             [Required]
-            [JsonPropertyName("pregunta_numero")]
-            [BsonElement("pregunta_numero")]
-            public int PreguntaNumero { get; set; }
+            [BsonElement("pregunta")]
+            public int Pregunta { get; set; }
 
             [Required]
             [BsonElement("respuesta")]
